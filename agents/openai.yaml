@@ -1,4 +1,4 @@
 interface:
-  display_name: "Autonomous Algorithm Optimizer"
+  display_name: "AutoAlgo"
   short_description: "Mechanism-first autonomous algorithm optimization"
-  default_prompt: "Use $research-auto to define and run a bounded, literature-backed algorithm optimization study with batch validation and causal attribution."
+  default_prompt: "Use $autoalgo to define and run a bounded, literature-backed algorithm optimization study with batch validation and causal attribution."

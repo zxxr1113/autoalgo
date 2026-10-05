@@ -1,6 +1,6 @@
 # Worked Example: Speeding Up ABC `&scorr`
 
-This illustrative example shows how `research-auto` organizes a runtime
+This illustrative example shows how `autoalgo` organizes a runtime
 optimization study for ABC sequential correlation reduction. It describes the
 research method and decision rules without claiming unpublished measurements.
 

@@ -1,9 +1,9 @@
-# Autonomous Algorithm Optimization
+# AutoAlgo — Autonomous Algorithm Optimization Skill
 
-[![GitHub stars](https://img.shields.io/github/stars/zxxr1113/research-auto?style=social)](https://github.com/zxxr1113/research-auto/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/zxxr1113/autoalgo?style=social)](https://github.com/zxxr1113/autoalgo/stargazers)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-`research-auto` is a Codex and Agent Skills-compatible workflow for autonomous
+`autoalgo` is a Codex and Agent Skills-compatible workflow for autonomous
 algorithm optimization without drifting into case-by-case tuning.
 
 It is designed for research where an agent reads literature, changes an
@@ -55,19 +55,19 @@ small development set.
 Using the open Agent Skills CLI:
 
 ```bash
-npx skills add zxxr1113/research-auto --skill research-auto -g -a codex -y
+npx skills add zxxr1113/autoalgo --skill autoalgo -g -a codex -y
 ```
 
 Or clone it directly:
 
 ```bash
-git clone https://github.com/zxxr1113/research-auto.git ~/.codex/skills/research-auto
+git clone https://github.com/zxxr1113/autoalgo.git ~/.codex/skills/autoalgo
 ```
 
 Start with a prompt such as:
 
 ```text
-Use $research-auto to investigate a faster candidate-evaluation algorithm.
+Use $autoalgo to investigate a faster candidate-evaluation algorithm.
 Before autonomous work, help me agree on the quality target, runtime target,
 initial direction, timeout, evaluation batch, correctness checks, and budget.
 ```
@@ -82,7 +82,7 @@ continue/pivot/stop decisions without publishing experimental results.
 ## Repository structure
 
 ```text
-research-auto/
+autoalgo/
 ├── SKILL.md
 ├── agents/openai.yaml
 ├── examples/
@@ -120,7 +120,7 @@ mechanism before proceeding.
 
 ## 中文简介
 
-`research-auto` 是一个面向通用算法优化的自主科研 Skill，适用于搜索、求解器、
+`autoalgo` 是一个面向通用算法优化的自主科研 Skill，适用于搜索、求解器、
 编译优化、图算法、科学计算、EDA 等具有可重复实验指标的研究问题。它强调文献与
 机制、批量验证、因果归因和可泛化性，避免 Agent 围绕少数 benchmark 不断调整
 阈值、重试策略和特殊分支。

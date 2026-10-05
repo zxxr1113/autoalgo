@@ -1,9 +1,9 @@
 ---
-name: research-auto
+name: autoalgo
 description: "Run bounded, mechanism-first autonomous research for algorithm optimization. Use when the user wants an agent to investigate literature-backed directions, implement prototypes, run controlled batches, attribute quality and runtime changes, and decide whether to continue, pivot, or stop. Applies across search, solvers, compilers, graph algorithms, scientific computing, and other mechanically evaluated algorithms. Do not use for an ordinary one-off benchmark, bug fix, or literature lookup."
 ---
 
-# Autonomous Algorithm Optimization
+# AutoAlgo — Autonomous Algorithm Optimization Skill
 
 Use this skill to turn an open-ended optimization goal into a bounded research program. Preserve the project's own correctness rules, metric definitions, experiment tools, resource limits, and authoritative report.
 
