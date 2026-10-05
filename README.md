@@ -87,6 +87,10 @@ Representative cases are deliberately short-lived. If the agent keeps adjusting 
 
 默认研究节奏是：归因分析 → 改代码 → 跑一两个典型 case 排错 → 尽快并行跑预先定义的批量 case → 判断继续、优化、转向或停止。
 
+## Contributing
+
+Real EDA experiment reports are the most useful contribution. See [CONTRIBUTING.md](CONTRIBUTING.md) to share a workload, a failure mode, or a rule that improved research behavior.
+
 ## License
 
 MIT
