@@ -1,10 +1,15 @@
 # Research Auto for EDA Algorithm Optimization
 
+[![GitHub stars](https://img.shields.io/github/stars/zxxr1113/research-auto?style=social)](https://github.com/zxxr1113/research-auto/stargazers)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 `research-auto` is a Codex skill for running autonomous algorithm research without drifting into case-by-case tuning.
 
 It was developed from a real EDA optimization workflow: logic synthesis and sequential optimization experiments where quality, runtime, proof status, profiling, corpus bias, and reproducibility all matter. The central idea is simple:
 
 > Autonomous research should accumulate mechanistic understanding, not merely accumulate benchmark points.
+
+If this workflow helps your research, please star the repository and share the EDA workload where you tried it. Real experiment feedback is especially valuable.
 
 ## What makes it different
 
