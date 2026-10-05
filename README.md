@@ -1,6 +1,7 @@
 # Research Auto for EDA Algorithm Optimization
 
 [![GitHub stars](https://img.shields.io/github/stars/zxxr1113/research-auto?style=social)](https://github.com/zxxr1113/research-auto/stargazers)
+[![skills.sh](https://skills.sh/b/zxxr1113/research-auto)](https://www.skills.sh/zxxr1113/research-auto/research-auto)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 `research-auto` is a Codex skill for running autonomous algorithm research without drifting into case-by-case tuning.
@@ -35,6 +36,8 @@ If this workflow helps your research, please star the repository and share the E
 The workflow also applies to other algorithm research with mechanical evaluation and expensive batch experiments.
 
 ## Install
+
+[View the indexed skill on skills.sh](https://www.skills.sh/zxxr1113/research-auto/research-auto), or install it directly:
 
 Using the open Agent Skills CLI:
 
