@@ -36,6 +36,14 @@ The workflow also applies to other algorithm research with mechanical evaluation
 
 ## Install
 
+Using the open Agent Skills CLI:
+
+```bash
+npx skills add zxxr1113/research-auto --skill research-auto -g -a codex -y
+```
+
+Or clone it directly:
+
 ```bash
 git clone https://github.com/zxxr1113/research-auto.git ~/.codex/skills/research-auto
 ```
