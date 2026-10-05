@@ -59,12 +59,19 @@ Before autonomous work, help me agree on the quality target, runtime target,
 initial direction, timeout, batch, correctness checks, and research budget.
 ```
 
+For a complete runtime-research example, see
+[speeding up ABC `&scorr`](examples/scorr-speed-optimization.md). It covers
+profiling, cohort selection, paired timing, work-count attribution, timeout
+policy, and mechanism-level continue/pivot/stop decisions.
+
 ## Repository structure
 
 ```text
 research-auto/
 ├── SKILL.md
 ├── agents/openai.yaml
+├── examples/
+│   └── scorr-speed-optimization.md
 └── references/
     ├── research-record.md
     └── eda-experiment-workflow.md
