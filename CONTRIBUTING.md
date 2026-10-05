@@ -4,7 +4,7 @@ Contributions grounded in real research runs are welcome.
 
 Useful reports include:
 
-- the EDA or algorithm problem and correctness boundary;
+- the algorithmic problem and its correctness or validity boundary;
 - the baseline, metric, corpus, timeout, and worker configuration;
 - what the skill caused the agent to do;
 - where the workflow prevented case tuning or weak attribution;

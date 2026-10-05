@@ -1,4 +1,4 @@
 interface:
-  display_name: "EDA Research Auto"
-  short_description: "Mechanism-first autonomous research for EDA optimization"
-  default_prompt: "Use $research-auto to define and run a bounded, literature-backed EDA optimization study with batch validation and causal attribution."
+  display_name: "Autonomous Algorithm Optimizer"
+  short_description: "Mechanism-first autonomous algorithm optimization"
+  default_prompt: "Use $research-auto to define and run a bounded, literature-backed algorithm optimization study with batch validation and causal attribution."

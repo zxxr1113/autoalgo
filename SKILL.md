@@ -1,9 +1,9 @@
 ---
 name: research-auto
-description: "Run bounded, mechanism-first autonomous research for EDA and algorithm optimization. Use when the user wants an agent to investigate literature-backed directions, implement prototypes, run controlled batches, attribute gains and regressions, and decide whether to continue, pivot, or stop. Do not use for an ordinary one-off benchmark, bug fix, or literature lookup."
+description: "Run bounded, mechanism-first autonomous research for algorithm optimization. Use when the user wants an agent to investigate literature-backed directions, implement prototypes, run controlled batches, attribute quality and runtime changes, and decide whether to continue, pivot, or stop. Applies across search, solvers, compilers, graph algorithms, scientific computing, and other mechanically evaluated algorithms. Do not use for an ordinary one-off benchmark, bug fix, or literature lookup."
 ---
 
-# Research Auto
+# Autonomous Algorithm Optimization
 
 Use this skill to turn an open-ended optimization goal into a bounded research program. Preserve the project's own correctness rules, metric definitions, experiment tools, resource limits, and authoritative report.
 
@@ -101,7 +101,7 @@ When evidence cannot distinguish these possibilities, record the direction as un
 
 ## Keep reproducible research records
 
-Use the project's authoritative report rather than creating session handoffs. Read [the research record](references/research-record.md) when preparing experiments or reporting results. For EDA-specific cohort, correctness, profiling, provenance, and timing guidance, read [the EDA experiment workflow](references/eda-experiment-workflow.md).
+Use the project's authoritative report rather than creating session handoffs. Read [the research record](references/research-record.md) when preparing experiments or reporting results. For cohort selection, validity, profiling, provenance, and timing guidance, read [the experiment workflow](references/experiment-workflow.md).
 
 Keep raw data separate from interpretation. Record negative results and evidence limits. At the end of the authorized run, report verified effects and attribution, failed hypotheses, unresolved uncertainty, budget limitations, and the most defensible next directions.
 

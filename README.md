@@ -1,43 +1,56 @@
-# Research Auto for EDA Algorithm Optimization
+# Autonomous Algorithm Optimization
 
 [![GitHub stars](https://img.shields.io/github/stars/zxxr1113/research-auto?style=social)](https://github.com/zxxr1113/research-auto/stargazers)
-[![skills.sh](https://skills.sh/b/zxxr1113/research-auto)](https://www.skills.sh/zxxr1113/research-auto/research-auto)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-`research-auto` is a Codex skill for running autonomous algorithm research without drifting into case-by-case tuning.
+`research-auto` is a Codex and Agent Skills-compatible workflow for autonomous
+algorithm optimization without drifting into case-by-case tuning.
 
-It was developed from a real EDA optimization workflow: logic synthesis and sequential optimization experiments where quality, runtime, proof status, profiling, corpus bias, and reproducibility all matter. The central idea is simple:
+It is designed for research where an agent reads literature, changes an
+algorithm, runs expensive experiments, attributes gains and regressions, and
+must decide when to continue, pivot, or stop. The central principle is:
 
-> Autonomous research should accumulate mechanistic understanding, not merely accumulate benchmark points.
+> Autonomous research should accumulate mechanistic understanding, not merely
+> accumulate benchmark points.
 
-If this workflow helps your research, please star the repository and share the EDA workload where you tried it. Real experiment feedback is especially valuable.
+If this workflow improves a real optimization study, please star the repository
+and share the problem class where you used it. Evidence from actual research
+runs is especially valuable.
 
 ## What makes it different
 
-- **Literature and mechanism first.** New directions begin from prior work or a clear causal analysis.
-- **Quality value is judged independently from prototype speed.** A slow prototype can still reveal a valuable direction.
-- **No benchmark overfitting.** Individual circuits diagnose bugs and bottlenecks; they are not a training set for magic numbers and special cases.
-- **Batch validation after each meaningful change.** The default rhythm is attribution → code → 1–2 smoke cases → a predefined parallel batch.
-- **Attribution before iteration.** Aggregate gains, regressions, runtime, and timeouts are explained before another idea is stacked on top.
-- **Direction-level decisions.** The skill distinguishes a failed implementation from a failed parameterization and from evidence against the core idea.
-- **Compute-aware execution.** It uses safe server parallelism for discovery and low-interference paired runs for timing claims.
-- **Reproducible EDA evidence.** It records source, binary, inputs, commands, proof policy, workers, timeouts, metrics, and profiling fields.
+- **Research contract before autonomy.** Goal, metrics, correctness, timeout,
+  evaluation cohort, initial direction, and budget are agreed before exploration.
+- **Literature and mechanism first.** New directions begin from prior work or a
+  causal account of the measured bottleneck.
+- **No benchmark overfitting.** Individual cases diagnose bugs and mechanism
+  boundaries; they are not a training set for magic numbers and special cases.
+- **Batch validation after meaningful changes.** The default rhythm is
+  attribution → code → 1–2 smoke cases → a predefined parallel batch.
+- **Quality and prototype runtime are separated.** A slow prototype can reveal
+  a valuable algorithmic direction; a tiny cheap gain can still be unimportant.
+- **Attribution before iteration.** Aggregate gains, regressions, runtime,
+  failures, and timeouts are explained before another idea is added.
+- **Direction-level decisions.** The workflow distinguishes a failed
+  implementation, a failed parameterization, and evidence against the core idea.
+- **Reproducible evidence.** It records source, inputs, commands, environments,
+  metrics, validity checks, profiling fields, resource use, and evidence limits.
 
-## Typical use cases
+## Suitable research problems
 
-- logic rewriting and resubstitution;
-- cut enumeration and candidate evaluation;
-- technology mapping;
-- combinational or sequential optimization;
-- SAT-backed transformation and proof workflows;
-- cache, representation, and data-structure research;
-- quality/runtime tradeoff studies across circuit corpora.
+- search, planning, scheduling, and combinatorial optimization;
+- graph algorithms and dynamic data structures;
+- compiler passes and program optimization;
+- SAT/SMT, theorem proving, and proof-backed transformations;
+- numerical and scientific-computing kernels;
+- candidate generation, ranking, pruning, caching, and incremental algorithms;
+- quality/runtime tradeoff studies over heterogeneous benchmark corpora.
 
-The workflow also applies to other algorithm research with mechanical evaluation and expensive batch experiments.
+The workflow is most useful when evaluation is mechanical but expensive, several
+algorithmic directions are plausible, and weak experimentation can easily fit a
+small development set.
 
 ## Install
-
-[View the indexed skill on skills.sh](https://www.skills.sh/zxxr1113/research-auto/research-auto), or install it directly:
 
 Using the open Agent Skills CLI:
 
@@ -51,18 +64,20 @@ Or clone it directly:
 git clone https://github.com/zxxr1113/research-auto.git ~/.codex/skills/research-auto
 ```
 
-Then start with a prompt such as:
+Start with a prompt such as:
 
 ```text
-Use $research-auto to investigate a new cut-evaluation algorithm.
+Use $research-auto to investigate a faster candidate-evaluation algorithm.
 Before autonomous work, help me agree on the quality target, runtime target,
-initial direction, timeout, batch, correctness checks, and research budget.
+initial direction, timeout, evaluation batch, correctness checks, and budget.
 ```
 
-For a complete runtime-research example, see
-[speeding up ABC `&scorr`](examples/scorr-speed-optimization.md). It covers
-profiling, cohort selection, paired timing, work-count attribution, timeout
-policy, and mechanism-level continue/pivot/stop decisions.
+## Worked example
+
+[Speeding up ABC `&scorr`](examples/scorr-speed-optimization.md) demonstrates the
+generic workflow on an EDA algorithm. It covers profiling, cohort selection,
+paired timing, work-count attribution, timeout policy, and mechanism-level
+continue/pivot/stop decisions without publishing experimental results.
 
 ## Repository structure
 
@@ -74,10 +89,12 @@ research-auto/
 │   └── scorr-speed-optimization.md
 └── references/
     ├── research-record.md
-    └── eda-experiment-workflow.md
+    └── experiment-workflow.md
 ```
 
-`SKILL.md` contains the research policy. The references define a reusable experiment record and EDA-specific validation guidance.
+`SKILL.md` contains the research policy. The references define a reusable
+experiment workflow and research record. The example applies them to a concrete
+EDA speed-optimization problem.
 
 ## Core experiment loop
 
@@ -97,17 +114,25 @@ literature / mechanism analysis
  continue / optimize / pivot / stop
 ```
 
-Representative cases are deliberately short-lived. If the agent keeps adjusting thresholds or policies around them, the workflow requires it to stop and recover a general mechanism before proceeding.
+Representative cases are deliberately short-lived. If the agent keeps adjusting
+thresholds or policies around them, the workflow requires it to recover a general
+mechanism before proceeding.
 
 ## 中文简介
 
-`research-auto` 是一个面向 EDA 算法优化的自主科研 skill。它强调文献与机制、批量验证、因果归因和可泛化性，避免 agent 围绕少数 benchmark 不断调整阈值、重试策略和特殊分支。
+`research-auto` 是一个面向通用算法优化的自主科研 Skill，适用于搜索、求解器、
+编译优化、图算法、科学计算、EDA 等具有可重复实验指标的研究问题。它强调文献与
+机制、批量验证、因果归因和可泛化性，避免 Agent 围绕少数 benchmark 不断调整
+阈值、重试策略和特殊分支。
 
-默认研究节奏是：归因分析 → 改代码 → 跑一两个典型 case 排错 → 尽快并行跑预先定义的批量 case → 判断继续、优化、转向或停止。
+默认节奏是：归因分析 → 修改算法 → 运行一两个典型 case 排错 → 尽快并行运行
+预先定义的批量 case → 判断继续、优化、转向或停止。
 
 ## Contributing
 
-Real EDA experiment reports are the most useful contribution. See [CONTRIBUTING.md](CONTRIBUTING.md) to share a workload, a failure mode, or a rule that improved research behavior.
+Reports from real algorithm-research runs are the most useful contribution. See
+[CONTRIBUTING.md](CONTRIBUTING.md) to share a workload, failure mode, or research
+rule that improved agent behavior.
 
 ## License
 
